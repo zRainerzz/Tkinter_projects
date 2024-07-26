@@ -7,7 +7,8 @@ root=Tk()
 
 
 def MyClick():
-    mylabel1=Label(root,text="Hello, "+e.get()).grid(row=5,column=0)
+    hello= "Hello "+ e.get()
+    mylabel1=Label(root,text=hello).grid(row=5,column=0)
 
 
 
@@ -24,6 +25,7 @@ mybutton2=Button(root,text="You can't click me.",pady=50,state=DISABLED,bg="blac
 e=Entry(root,width=50,bg="black",fg="white",borderwidth=5)
 e.grid(row=3,column=6)
 e.get()
+e.insert()
 #get function gets whatever u typed in the entry widget
 
 
