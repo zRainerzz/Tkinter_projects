@@ -2,7 +2,7 @@ from tkinter import *
 
 root=Tk()
 
-e=Entry(root,width=50,bg="black",fg="white")
+e=Entry(root,width=50,bg="black",fg="white",borderwidth=5)
 e.grid(row=3,column=6)
 
 def MyClick():
