@@ -25,8 +25,9 @@ mybutton2=Button(root,text="You can't click me.",pady=50,state=DISABLED,bg="blac
 e=Entry(root,width=50,bg="black",fg="white",borderwidth=5)
 e.grid(row=3,column=6)
 e.get()
-e.insert()
 #get function gets whatever u typed in the entry widget
+e.insert(0,"What's your name? ")
+#put some default text in the entry box
 
 
 
