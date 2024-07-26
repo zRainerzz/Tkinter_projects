@@ -11,7 +11,7 @@ mybutton1= Button(root,text="Click Me!",padx=50, command=MyClick, fg="blue", bg=
 #pady change the heigh (y coordinate axis)
 #by adding disabled to the button, now it is disabled
 mybutton2=Button(root,text="You can't click me.",pady=50,state=DISABLED,bg="black",fg="white")
-
+#fg is for colors, bg is for background color.
 
 
 
