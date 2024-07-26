@@ -7,7 +7,7 @@ root=Tk()
 
 
 def MyClick():
-    mylabel1=Label(root,text=e.get()).grid(row=5,column=0)
+    mylabel1=Label(root,text="Hello, "+e.get()).grid(row=5,column=0)
 
 
 
