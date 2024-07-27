@@ -14,8 +14,8 @@ def MyClick():
 
 mybutton1= Button(root,text="Click Me!",padx=50, command=MyClick, fg="blue", bg="white")
 #command allows the execute of a function.
-#padx change the x abscissa axis
-#pady change the y coordinate axis
+#padx change the x abscissa axis (padding in the x axis)
+#pady change the y coordinate axis (padding in the y axis)
 #by adding disabled to the button, now it is disabled
 
 
