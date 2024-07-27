@@ -24,7 +24,16 @@ button_0= Button(root,text="0",padx=40,pady=20,command=button_add)
 
 
 #put buttons on the screen
-
+button_0.grid(row=,column=)
+button_1.grid(row=,column=)
+button_2.grid(row=,column=)
+button_3.grid(row=,column=)
+button_4.grid(row=,column=)
+button_5.grid(row=,column=)
+button_6.grid(row=,column=)
+button_7.grid(row=,column=)
+button_8.grid(row=,column=)
+button_9.grid(row=,column=)
 
 
 myButton=Button(root,text="Enter Your Stock Quote",command=button_add)
