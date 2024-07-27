@@ -21,6 +21,9 @@ button_7= Button(root,text="7",padx=40,pady=20,command=button_add)
 button_8= Button(root,text="8",padx=40,pady=20,command=button_add)
 button_9= Button(root,text="9",padx=40,pady=20,command=button_add)
 button_0= Button(root,text="0",padx=40,pady=20,command=button_add)
+button_add= Button(root,text="+",padx=39,pady=20,command=button_add)
+button_equal= Button(root,text="=",padx=39,pady=20,command=button_add)
+
 
 
 #put buttons on the screen
