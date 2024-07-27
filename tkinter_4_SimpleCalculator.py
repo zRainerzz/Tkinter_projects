@@ -8,7 +8,8 @@ e.grid(row=0,column=0,columnspan=3,padx=10,pady=10)
 #e.insert(0, "")
 
 def button_click():
-    return
+    e.delete(0,END)
+    e.insert(0,number)
 
 #define buttons
 button_1= Button(root,text="1",padx=40,pady=20,command=lambda: button_click(1))
