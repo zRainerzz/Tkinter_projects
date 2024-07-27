@@ -13,6 +13,10 @@ def button_click(number):
     e.delete(0,END)
     e.insert(0,str(current)+ str(number))
 
+def button_clear1():
+    e.delete(0,END)
+
+
 #define buttons
 button_1= Button(root,text="1",padx=40,pady=20,command=lambda: button_click(1))
 button_2= Button(root,text="2",padx=40,pady=20,command=lambda: button_click(2))
@@ -26,7 +30,7 @@ button_9= Button(root,text="9",padx=40,pady=20,command=lambda: button_click(9))
 button_0= Button(root,text="0",padx=40,pady=20,command=lambda: button_click(0))
 button_add= Button(root,text="+",padx=39,pady=20,command=lambda: button_click())
 button_equal= Button(root,text="=",padx=91,pady=20,command=lambda: button_click())
-button_clear=Button(root,text="Clear",padx=79,pady=20,command=lambda: button_click())
+button_clear=Button(root,text="Clear",padx=79,pady=20,command=lambda: button_clear())
 
 
 
