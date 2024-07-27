@@ -23,6 +23,7 @@ button_9= Button(root,text="9",padx=40,pady=20,command=button_add)
 button_0= Button(root,text="0",padx=40,pady=20,command=button_add)
 button_add= Button(root,text="+",padx=39,pady=20,command=button_add)
 button_equal= Button(root,text="=",padx=91,pady=20,command=button_add)
+button_clear=Button(root,text="Clear",padx=79,pady=20,command=button_add )
 
 
 
