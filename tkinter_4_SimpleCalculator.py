@@ -39,7 +39,6 @@ button_9.grid(row=1,column=2)
 button_0.grid(row=4,column=0)
 
 
-myButton=Button(root,text="Enter Your Stock Quote",command=button_add)
 
 
 root.mainloop()
