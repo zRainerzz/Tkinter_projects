@@ -51,7 +51,19 @@ def button_divide1():
 def button_equal1():
     second_number=e.get()
     e.delete(0, END)
-    e.insert(0,f_int_number + int(second_number))
+    if math=="Addition":
+        e.insert(0,f_int_number + int(second_number))
+
+    if math=="Subtraction":
+        e.insert(0,f_int_number - int(second_number))
+
+    if math=="Multiplication":
+        e.insert(0,f_int_number * int(second_number))
+        
+    if math=="Division":
+        e.insert(0,f_int_number / int(second_number))
+
+
 
 #define buttons
 button_1= Button(root,text="1",padx=40,pady=20,command=lambda: button_click(1))
