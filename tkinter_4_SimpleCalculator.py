@@ -1,7 +1,7 @@
 from tkinter import *
+
 root=Tk()
 root.title("Calculator")
-
 
 e=Entry(root,width=35,borderwidth=5)
 e.grid(row=0,column=0,columnspan=3,padx=10,pady=10)
@@ -27,6 +27,15 @@ def button_equal1():
     e.delete(0, END)
     e.insert(0,f_int_number + int(second_number))
 
+def button_subtract1():
+    ...
+
+def button_multiply1():
+    ...
+
+def button_divide1():
+    ...
+    
 #define buttons
 button_1= Button(root,text="1",padx=40,pady=20,command=lambda: button_click(1))
 button_2= Button(root,text="2",padx=40,pady=20,command=lambda: button_click(2))
@@ -39,13 +48,13 @@ button_8= Button(root,text="8",padx=40,pady=20,command=lambda: button_click(8))
 button_9= Button(root,text="9",padx=40,pady=20,command=lambda: button_click(9))
 button_0= Button(root,text="0",padx=40,pady=20,command=lambda: button_click(0))
 
-button_equal= Button(root,text="=",padx=91,pady=20,command=button_equal1)
-button_clear=Button(root,text="Clear",padx=79,pady=20,command=button_clear1)
+button_equal= Button(root,text="=",padx=93,pady=20,command=button_equal1)
+button_clear=Button(root,text="Clear",padx=81,pady=20,command=button_clear1)
 
-button_add= Button(root,text="ADD(+)",padx=39,pady=20,command=button_add1)
-button_subtract= Button(root,text="SUBTRACT(-)",padx=39,pady=20,command=button_subtract1)
-button_multiply= Button(root,text="MULTIPLY(*)",padx=39,pady=20,command=button_multiply1)
-button_divide= Button(root,text="MULTIPLY(/)",padx=39,pady=20,command=button_divide1)
+button_add= Button(root,text="+",padx=40,pady=20,command=button_add1)
+button_subtract= Button(root,text="-",padx=41,pady=20,command=button_subtract1)
+button_multiply= Button(root,text="*",padx=41,pady=20,command=button_multiply1)
+button_divide= Button(root,text="/",padx=41,pady=20,command=button_divide1)
 
 
 #put buttons on the screen
