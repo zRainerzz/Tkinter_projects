@@ -41,6 +41,9 @@ button_8.grid(row=1,column=1)
 button_9.grid(row=1,column=2)
 
 button_0.grid(row=4,column=0)
+button_clear.grid()
+button_add.grid()
+button_equal.grid()
 
 
 
