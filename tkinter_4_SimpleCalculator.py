@@ -59,7 +59,7 @@ def button_equal1():
 
     if math=="Multiplication":
         e.insert(0,f_int_number * int(second_number))
-        
+
     if math=="Division":
         e.insert(0,f_int_number / int(second_number))
 
@@ -81,7 +81,7 @@ button_equal= Button(root,text="=",padx=93,pady=20,command=button_equal1)
 button_clear=Button(root,text="Clear",padx=81,pady=20,command=button_clear1)
 
 button_add= Button(root,text="+",padx=40,pady=20,command=button_add1)
-button_subtract= Button(root,text="-",padx=41,pady=20,command=button_subtract1)
+button_subtract= Button(root,text="-",padx=42,pady=20,command=button_subtract1)
 button_multiply= Button(root,text="*",padx=41,pady=20,command=button_multiply1)
 button_divide= Button(root,text="/",padx=41,pady=20,command=button_divide1)
 
