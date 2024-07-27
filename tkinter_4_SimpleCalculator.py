@@ -19,23 +19,40 @@ def button_clear1():
 def button_add1():
     first_number=e.get()
     global f_int_number
+    global math
+    math="Addition"
     f_int_number=int(first_number)
     e.delete(0,END)
 
+def button_subtract1():
+    first_number=e.get()
+    global f_int_number
+    global math
+    math="Subtraction"
+    f_int_number=int(first_number)
+    e.delete(0,END)
+
+def button_multiply1():
+    first_number=e.get()
+    global f_int_number
+    global math
+    math="Multiplication"
+    f_int_number=int(first_number)
+    e.delete(0,END)
+
+def button_divide1():
+    first_number=e.get()
+    global f_int_number
+    global math
+    math="Division"
+    f_int_number=int(first_number)
+    e.delete(0,END)
+    
 def button_equal1():
     second_number=e.get()
     e.delete(0, END)
     e.insert(0,f_int_number + int(second_number))
 
-def button_subtract1():
-    ...
-
-def button_multiply1():
-    ...
-
-def button_divide1():
-    ...
-    
 #define buttons
 button_1= Button(root,text="1",padx=40,pady=20,command=lambda: button_click(1))
 button_2= Button(root,text="2",padx=40,pady=20,command=lambda: button_click(2))
