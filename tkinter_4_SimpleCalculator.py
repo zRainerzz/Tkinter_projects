@@ -42,8 +42,6 @@ button_add= Button(root,text="+",padx=39,pady=20,command=button_add1)
 button_equal= Button(root,text="=",padx=91,pady=20,command=button_equal1)
 button_clear=Button(root,text="Clear",padx=79,pady=20,command=button_clear1)
 
-
-
 #put buttons on the screen
 button_1.grid(row=3,column=0)
 button_2.grid(row=3,column=1)
@@ -61,8 +59,5 @@ button_0.grid(row=4,column=0)
 button_clear.grid(row=4,column=1,columnspan=2)
 button_add.grid(row=5,column=0)
 button_equal.grid(row=5,column=1,columnspan=2)
-
-
-
 
 root.mainloop()
