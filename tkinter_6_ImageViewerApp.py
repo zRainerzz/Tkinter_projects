@@ -37,7 +37,7 @@ photo4 = ImageTk.PhotoImage(img_resized4)
 
 
 #listing images
-image_list=[photo,photo1,photo2,photo3,photo4]
+image_list=[photo, photo1, photo2, photo3, photo4]
 
 """ Display image on label """
 my_label = Label(image=photo)
