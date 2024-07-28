@@ -72,7 +72,10 @@ def back(image_number):
     my_label=Label(image=image_list[image_number-1])
     button_back=Button(root,text="<<",bg="yellow",fg="black",command=lambda:back(image_number-1))
     button_forward=Button(root,text=">>",bg="yellow",fg="black",command=lambda: forward(image_number+1))
-    
+
+    if image_number==1:
+        button_back=Button(root,text=">>",bg="yellow",fg="black",state=DISABLED)
+
     my_label.grid(row=0, column=0,columnspan=3)
     button_back.grid(row=1,column=0,pady=20)
     button_forward.grid(row=1, column=2,pady=20)
