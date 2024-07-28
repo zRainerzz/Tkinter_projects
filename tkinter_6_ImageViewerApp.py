@@ -48,12 +48,15 @@ def forward(image_number):
     global my_label
     global button_forward
     global button_back
+
     my_label.grid_forget()
     my_label=Label(image=image_list[image_number-1])#we passed 2 which is the 3rd item in the list(since lists start from 0), we do -1 to go the image number 1
-    button_forward=Button(root,text=">>",bg="yellow",fg="black",command=lambda: image_number+1)#why? because it is back to normal, now you can go back to normal
-    button_back=Button(root,text="<<",bg="yellow",fg="black",command=back)
-
+    button_forward=Button(root,text=">>",bg="yellow",fg="black",command=lambda: forward(image_number+1))#why? because it is back to normal, now you can go normal
+    button_back=Button(root,text="<<",bg="yellow",fg="black",command=lambda:back(image_number-1))
+    
     my_label.grid(row=0, column=0,columnspan=3)
+    button_back.grid(row=1,column=0,pady=20)
+    button_forward.grid(row=1, column=2,pady=20)
 
 def back():
     global my_label
