@@ -24,6 +24,7 @@ my_mg=ImageTk.PhotoImage(Image.open("python.png"))
 #put the image in something
 my_label=Label(image=my_mg)
 #put it in the screen
+my_label.pack()
 
 
 
