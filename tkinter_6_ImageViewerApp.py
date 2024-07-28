@@ -48,6 +48,8 @@ def forward(image_number):
     global my_label
     global button_forward
     global button_back
+    my_label.grid_forget()
+    my_label=Label(image=image_list[image_number-1])#we passed 2 which is the 3rd item in the list(since lists start from 0), we do -1 to go the image number 1
 
 def back():
     global my_label
