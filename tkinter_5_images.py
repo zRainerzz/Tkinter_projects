@@ -1,45 +1,32 @@
 from tkinter import *
-from PIL import ImageTk, Image
-#i'll be adding a small revision about PILLOW (PIL) , in the upcoming repository.
+from PIL import Image, ImageTk
 
 
-root=Tk()
+root = Tk()
 root.title("github.com/zRainerzz")
 
-"""as a windows user, you just need this line to upload the icon which is in .ico format (i added an ico image to the repository for your use.)
+""" Windows icon (replace with your .ico file) """
+# root.iconbitmap("tkinter_icon.ico")  # Uncomment for Windows
 
-root.iconbitmap("tkinter_icon.ico")
-"""
-
-"""For LINUX users:"""
-# Load the image
-icon_image = PhotoImage(file="tkinter_icon.png")
-# Set the icon
+""" Linux icon (replace with your .png file) """
+icon_image = ImageTk.PhotoImage(Image.open("tkinter_icon.png"))
 root.iconphoto(True, icon_image)
 
 
-"""images are 3 steps process:"""
-
-# Define/Load the image using Pillow
-img = ImageTk.PhotoImage(Image.open("python.jpg"))      # Replace with your image path
-
-
-# Put the image on something
-my_label=Label(image=img)
-
-#put it in the screen
-my_label.grid(row=1,column=2)
-
-#let's resize the img
-img_resized=img.resize((200,200))
+""" Load and resize image """
+img = Image.open("python.jpg")  # Replace with your image path
+img_resized = img.resize((200, 200))
+photo = ImageTk.PhotoImage(img_resized)
 
 
+""" Display image on label """
+my_label = Label(image=photo)
+my_label.grid(row=1, column=0)
 
-button_quit=Button(root,text="EXIT",bg="black",fg="yellow",command=root.quit)
-button_quit.grid(row=1,column=0)
 
-
-
+""" Exit button """
+button_quit = Button(root, text="EXIT", bg="black", fg="yellow", command=root.quit,width=100)
+button_quit.grid(row=0, column=0)
 
 
 root.mainloop()
