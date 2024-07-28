@@ -18,15 +18,53 @@ img = Image.open("python.jpg")  # Replace with your image path
 img_resized = img.resize((200, 200))
 photo = ImageTk.PhotoImage(img_resized)
 
+img1 = Image.open("image1.jpg")  # Replace with your image path
+img_resized1 = img1.resize((200, 200))
+photo1 = ImageTk.PhotoImage(img_resized1)
+
+img2 = Image.open("python.jpg")  # Replace with your image path
+img_resized2 = img2.resize((200, 200))
+photo2 = ImageTk.PhotoImage(img_resized2)
+
+img3 = Image.open("python.jpg")  # Replace with your image path
+img_resized3 = img3.resize((200, 200))
+photo3 = ImageTk.PhotoImage(img_resized3)
+
+img4 = Image.open("python.jpg")  # Replace with your image path
+img_resized4 = img4.resize((200, 200))
+photo4 = ImageTk.PhotoImage(img_resized4)
+
+
+
+#listing images
+image_list=[photo,photo1,photo2,photo3,photo4]
 
 """ Display image on label """
 my_label = Label(image=photo)
-my_label.grid(row=1, column=0)
+my_label.grid(row=0, column=0,columnspan=3)
 
 
-""" Exit button """
-button_quit = Button(root, text="EXIT", bg="black", fg="yellow", command=root.quit,width=100)
-button_quit.grid(row=0, column=0)
+def forward(image_number):
+    global my_label
+    global button_forward
+    global button_back
+
+def back():
+    global my_label
+    global button_forward
+    global button_back
+
+
+"""Back, Forward and Exit buttons """
+button_quit = Button(root, text="EXIT", bg="black", fg="yellow", command=root.quit,)
+button_back=Button(root,text="<<",bg="yellow",fg="black",command=back)
+button_forward=Button(root,text=">>",bg="yellow",fg="black",command=lambda : forward(2))
+
+"""DISPLAY BUTTONS"""
+
+button_quit.grid(row=1, column=1,pady=20)
+button_back.grid(row=1,column=0,pady=20)
+button_forward.grid(row=1, column=2,pady=20)
 
 
 root.mainloop()
