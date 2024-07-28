@@ -22,15 +22,15 @@ img1 = Image.open("image1.jpg")  # Replace with your image path
 img_resized1 = img1.resize((400, 400))
 photo1 = ImageTk.PhotoImage(img_resized1)
 
-img2 = Image.open("python.jpg")  # Replace with your image path
+img2 = Image.open("image2.jpg")  # Replace with your image path
 img_resized2 = img2.resize((400, 400))
 photo2 = ImageTk.PhotoImage(img_resized2)
 
-img3 = Image.open("python.jpg")  # Replace with your image path
+img3 = Image.open("image3.jpg")  # Replace with your image path
 img_resized3 = img3.resize((400, 400))
 photo3 = ImageTk.PhotoImage(img_resized3)
 
-img4 = Image.open("python.jpg")  # Replace with your image path
+img4 = Image.open("image4.jpg")  # Replace with your image path
 img_resized4 = img4.resize((400, 400))
 photo4 = ImageTk.PhotoImage(img_resized4)
 
@@ -54,6 +54,11 @@ def forward(image_number):
     button_forward=Button(root,text=">>",bg="yellow",fg="black",command=lambda: forward(image_number+1))#why? because it is back to normal, now you can go normal
     button_back=Button(root,text="<<",bg="yellow",fg="black",command=lambda:back(image_number-1))
     
+    if image_number==5:
+        button_forward=Button(root,text=">>",bg="yellow",fg="black",state=DISABLED)
+
+
+
     my_label.grid(row=0, column=0,columnspan=3)
     button_back.grid(row=1,column=0,pady=20)
     button_forward.grid(row=1, column=2,pady=20)
@@ -62,6 +67,8 @@ def back():
     global my_label
     global button_forward
     global button_back
+    
+    my_label.grid_forget()
 
 
 """Back, Forward and Exit buttons """
