@@ -19,14 +19,19 @@ root.iconphoto(True, icon_image)
 
 
 """images are 3 steps process:"""
-#define the image
-my_mg=ImageTk.PhotoImage(Image.open("python.png"))
-#put the image in something
-my_label=Label(image=my_mg)
+
+# Define/Load the image using Pillow
+img = ImageTk.PhotoImage(Image.open("python.jpg"))      # Replace with your image path
+
+
+# Put the image on something
+my_label=Label(image=img)
+
 #put it in the screen
-my_label.pack()
+my_label.grid(row=1,column=2)
 
-
+#let's resize the img
+img_resized=img.resize((200,200))
 
 
 
