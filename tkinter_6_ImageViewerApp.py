@@ -63,12 +63,23 @@ def forward(image_number):
     button_back.grid(row=1,column=0,pady=20)
     button_forward.grid(row=1, column=2,pady=20)
 
-def back():
+def back(image_number):
     global my_label
     global button_forward
     global button_back
-    
+
     my_label.grid_forget()
+    my_label=Label(image=image_list[image_number-1])
+    button_back=Button(root,text="<<",bg="yellow",fg="black",command=lambda:back(image_number-1))
+    button_forward=Button(root,text=">>",bg="yellow",fg="black",command=lambda: forward(image_number+1))
+
+    if image_number==0:
+        button_back=Button(root,text=">>",bg="yellow",fg="black",state=DISABLED)
+
+    my_label.grid(row=0, column=0,columnspan=3)
+    button_back.grid(row=1,column=0,pady=20)
+    button_forward.grid(row=1, column=2,pady=20)
+
 
 
 """Back, Forward and Exit buttons """
