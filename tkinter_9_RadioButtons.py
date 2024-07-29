@@ -18,13 +18,23 @@ r=IntVar()#this allows tkinter to keep track to the changes overtime.
 #and in order to call r, we r.get()
 r.set("2")
 
+MODES=[
+    ("Pepperoni",""),
+    ("Cheese",""),
+    ("Mushroom",""),
+    ("Onion",""),
+]
+
+
+
 def clicked(value):
     mylab=Label(root,text=value)
+    mylab.pack()
 
 
 
-Radiobutton(root,text="option 1",variable=r,value=1,command=lambda: clicked(r.get())).pack()#variable needed in radio but
-Radiobutton(root,text="option 2",variable=r,value=2,command=lambda: clicked(r.get())).pack()#variable needed in radio but
+#Radiobutton(root,text="option 1",variable=r,value=1,command=lambda: clicked(r.get())).pack()#variable needed in radio but
+#Radiobutton(root,text="option 2",variable=r,value=2,command=lambda: clicked(r.get())).pack()#variable needed in radio but
 
 
 mylab=Label(root,text=r.get())
