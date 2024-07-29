@@ -43,8 +43,8 @@ def clicked(value):
 #Radiobutton(root,text="option 2",variable=r,value=2,command=lambda: clicked(r.get())).pack()#variable needed in radio but
 
 
-mylab=Label(root,text=pizza.get())
-mylab.pack()
+#mylab=Label(root,text=pizza.get())
+#mylab.pack()
 
 b=Button(root,text="click me",command=lambda:clicked(pizza.get()))
 b.pack()
