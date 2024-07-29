@@ -14,6 +14,9 @@ root.iconphoto(True, icon_image)
 
 
 frame=LabelFrame(root,text="This is a Frame",padx=5,pady=10)
+b=Button(frame,text="Don't click me",command=quit)
+
 frame.pack(padx=10,pady=10)
+b.pack()
 
 root.mainloop()
