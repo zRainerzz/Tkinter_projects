@@ -41,7 +41,7 @@ image_list=[photo, photo1, photo2, photo3, photo4]
 
 
 #creating a status bar:
-status=Label(root,text="Image 1 of "+ str(len(image_list)),bd=1,relief=SUNKEN)#bd is border.
+status=Label(root,text="Image 1 of "+ str(len(image_list)),bd=1,relief=SUNKEN,anchor=E)#bd is border.
 
 
 
