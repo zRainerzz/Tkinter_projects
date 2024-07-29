@@ -19,7 +19,9 @@ frame=LabelFrame(root,text="Validation",padx=50,pady=100)#INTERNAL PADDING
 
 #showinfo, showwarning, showerror, askedquestion, askokcancel, askyesno
 def popup():
-    messagebox.showinfo("UPDATE!","DONE")
+    respone=messagebox.askyesno("UPDATE!","DONE")
+    Label(frame,text=respone).pack
+    if respone==1:
 
 
 
