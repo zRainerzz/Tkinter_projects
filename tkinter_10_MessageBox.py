@@ -18,7 +18,7 @@ frame=Frame(root,Text="Validation",padx=50,pady=100)#INTERNAL PADDING
 
 
 def popup():
-    messagebox.showinfo("DONE")
+    messagebox.showinfo("My Popup","DONE")
 
 frame.pack(padx=20,pady=20)#EXTERNAL PADDING
 Button(frame,text="Validation",command=popup).pack()
