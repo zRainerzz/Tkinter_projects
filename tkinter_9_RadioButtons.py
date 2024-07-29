@@ -14,18 +14,18 @@ root.iconphoto(True, icon_image)
 
 
 #we do r=StrVar() incase we want to pass a string to radios.
-r=IntVar()#this allows tkinter to keep track to the changes overtime.
+#r=IntVar()#this allows tkinter to keep track to the changes overtime.
 #and in order to call r, we r.get()
-r.set("2")
+#r.set("2")
 
 MODES=[
-    ("Pepperoni",""),
-    ("Cheese",""),
-    ("Mushroom",""),
-    ("Onion",""),
+    ("Pepperoni","Pepperoni"),
+    ("Cheese","Cheese"),
+    ("Mushroom","Mushroom"),
+    ("Onion","Onion"),
 ]
 
-
+pizza=StringVar()
 
 def clicked(value):
     mylab=Label(root,text=value)
