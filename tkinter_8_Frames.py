@@ -16,7 +16,7 @@ root.iconphoto(True, icon_image)
 frame=LabelFrame(root,text="This is a Frame",padx=50,pady=100)#INTERNAL PADDING
 b=Button(frame,text="Don't click me",command=quit)
 
-frame.pack(padx=10,pady=10)#EXTERNAL PADDING
+frame.pack(padx=20,pady=20)#EXTERNAL PADDING
 b.pack()
 
 root.mainloop()
