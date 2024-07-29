@@ -13,7 +13,7 @@ icon_image = ImageTk.PhotoImage(Image.open("tkinter_icon.png"))
 root.iconphoto(True, icon_image)
 
 
-frame=LabelFrame(root,text="This is a Frame",padx=5,pady=10)#INTERNAL PADDING
+frame=LabelFrame(root,text="This is a Frame",padx=50,pady=100)#INTERNAL PADDING
 b=Button(frame,text="Don't click me",command=quit)
 
 frame.pack(padx=10,pady=10)#EXTERNAL PADDING
