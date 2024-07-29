@@ -73,6 +73,7 @@ def forward(image_number):
     button_back.grid(row=1,column=0,pady=20)
     button_forward.grid(row=1, column=2,pady=20)
     
+    #UPDATE STATUS BAR
     status=Label(root,text="Image "+ str(image_number)+" of "+ str(len(image_list)),bd=1,relief=SUNKEN,anchor=W)#bd is border.
     status.grid(row=2,column=0,columnspan=3,sticky=W+E)
 
@@ -95,7 +96,7 @@ def back(image_number):
     button_back.grid(row=1,column=0,pady=20)
     button_forward.grid(row=1, column=2,pady=20)
     
-    
+    #UPDATE STATUS BAR
     status=Label(root,text="Image "+ str(image_number)+" of "+ str(len(image_list)),bd=1,relief=SUNKEN,anchor=W)#bd is border.
     status.grid(row=2,column=0,columnspan=3,sticky=W+E)
 
