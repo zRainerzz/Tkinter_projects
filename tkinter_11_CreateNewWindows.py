@@ -19,6 +19,8 @@ img = Image.open("image2.jpg")  # Replace with your image path
 img_resized = img.resize((200, 200))
 photo = ImageTk.PhotoImage(img_resized)
 
-lab1=Label(top, text=photo).pack
+""" Display image on label """
+my_label = Label(top,image=photo)
+my_label.pack()
 
 root.mainloop()
