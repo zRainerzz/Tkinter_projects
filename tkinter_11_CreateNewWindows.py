@@ -18,11 +18,6 @@ root.iconphoto(True, icon_image)
 
 
 
-""" Load and resize image """
-img = Image.open("image2.jpg")  # Replace with your image path
-img_resized = img.resize((400, 400))
-photo = ImageTk.PhotoImage(img_resized)
-
 
 
 
@@ -34,6 +29,8 @@ def popup():
     """ Display image on label """
     my_label = Label(top,image=photo)
     my_label.pack()
+    btn=Button(top,text="EXIT PHOTO",command=top.destroy,bg="green").pack()
+    btn2=Button(top,text="EXIT",command=quit,bg="green").pack()
 
 
 """ Load and resize image """
