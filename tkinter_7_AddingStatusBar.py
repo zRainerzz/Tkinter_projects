@@ -104,7 +104,7 @@ button_back.grid(row=1,column=0,pady=20)
 button_forward.grid(row=1, column=2,pady=20)
 
 """DISPLAY STATUS BAR"""
-status.grid(row=2,column=0,columnspan=3,sticky=N)
+status.grid(row=2,column=0,columnspan=3,sticky=W+E)
 """
 we want to stretch from left to right,
 
@@ -112,6 +112,6 @@ that's how stiky works:
     #with N, refers to North
     #with S, refers to South
     #with W, refers to West
-    #with C, refers to cost
+    #with E, refers to East
 """
 root.mainloop()
