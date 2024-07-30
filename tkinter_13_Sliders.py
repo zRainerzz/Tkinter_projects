@@ -26,8 +26,15 @@ horizontal=Scale(root,from_=0,to=200,orient=HORIZONTAL)
 vertical.pack()
 horizontal.pack()
 
-mylab=Label(root,text=vertical.get()).pack()
-mylab2=Label(root,text=horizontal.get()).pack()
+def slide1():
+    mylab=Label(root,text=vertical.get()).pack()
+
+def slide2():
+    mylab2=Label(root,text=horizontal.get()).pack()
+
+btn=Button(root,text="Slide vertically",command=slide1)
+btn=Button(root,text="Slide horizentally",command=slide2)
+
 
 
 
