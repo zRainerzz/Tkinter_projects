@@ -45,6 +45,7 @@ c.execute("""CREATE TABLE adresses (
 
 '''
 #Create Text Boxes
+
 f_name=Entry(root,width=30)
 f_name.grid(row=0,column=1,padx=20)
 
@@ -64,8 +65,24 @@ zipcode=Entry(root,width=30)
 zipcode.grid(row=5,column=1,padx=20)
 
 #Create Text Box Labels
-f_name_Label=Label()
 
+f_name_Label=Label(root,text="First Name :")
+f_name_Label.grid(row=0,column=0)
+
+l_name_Label=Label(root,text="Last Name :")
+l_name_Label.grid(row=1,column=0)
+
+adress_Label=Label(root,text="Adress :")
+adress_Label.grid(row=2,column=0)
+
+city_Label=Label(root,text="City :")
+city_Label.grid(row=3,column=0)
+
+state_Label=Label(root,text="State :")
+state_Label.grid(row=4,column=0)
+
+zipcode_Label=Label(root,text="Zipcode :")
+zipcode_Label.grid(row=5,column=0)
 
 #Commit changes
 conn.commit()
