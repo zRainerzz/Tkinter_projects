@@ -30,7 +30,7 @@ conn=sqlite3.connect('tkinter_17_GUI4DATABASE.db')
 #Create cursor
 c=conn.cursor()
 
-'''
+
 #Create table
 c.execute("""CREATE TABLE adresses (
           first_name text,
@@ -42,7 +42,7 @@ c.execute("""CREATE TABLE adresses (
           
 )""")
 
-'''
+
 #Create Text Boxes
 f_name=Entry(root,width=30)
 f_name.grid(row=0,column=1,padx=20)
@@ -63,6 +63,7 @@ zipcode=Entry(root,width=30)
 zipcode.grid(row=5,column=1,padx=20)
 
 #Create Text Box Labels
+f_name_Label=Label()
 
 
 #Commit changes
