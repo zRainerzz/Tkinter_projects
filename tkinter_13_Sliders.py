@@ -20,8 +20,8 @@ root.iconphoto(True, icon_image)
 root.geometry("500x500")
 
 
-vertical=Scale(root,from_=0,to=200)
-horizontal=Scale(root,from_=0,to=200,orient=HORIZONTAL)
+vertical=Scale(root,from_=0,to=800)
+horizontal=Scale(root,from_=0,to=800,orient=HORIZONTAL)
 
 vertical.pack()
 horizontal.pack()
