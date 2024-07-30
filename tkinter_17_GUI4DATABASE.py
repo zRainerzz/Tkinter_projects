@@ -66,6 +66,10 @@ def submit():
                   'state':state.get(),
                   'zipcode':zipcode.get()
               })
+    
+    #Create a Query Button
+    query_button=Button(root,text="Show Records",command=querry)
+    query_button.grid(row=7,column=0,columnspan=2,pady=10,padx=10,ipadx=137)
 
 
     #Commit changes
