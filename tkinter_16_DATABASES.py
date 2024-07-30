@@ -25,7 +25,7 @@ root.geometry("500x500")
 
 
 #Create a database or connect to one.
-conn=sqlite3.connect('address_book.db')
+conn=sqlite3.connect('tkinter_16_DATABASES.db')
 
 #Create cursor
 c=conn.cursor()
