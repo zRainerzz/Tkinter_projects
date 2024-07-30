@@ -32,8 +32,8 @@ def slide1():
 def slide2():
     mylab2=Label(root,text=horizontal.get()).pack()
 
-btn=Button(root,text="Slide vertically",command=slide1)
-btn=Button(root,text="Slide horizentally",command=slide2)
+btn1=Button(root,text="Slide vertically",command=slide1)
+btn2=Button(root,text="Slide horizentally",command=slide2)
 
 
 
