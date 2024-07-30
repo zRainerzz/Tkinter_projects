@@ -25,6 +25,8 @@ def show():
 var=StringVar()
 
 c=Checkbutton(root, text="Check Me!",variable=var,onvalue="ON",offvalue="OFF")
+#as a bug, you will find the checkbox selected (that's a glitch)
+c.deselect()
 c.pack()
 
 
