@@ -19,15 +19,16 @@ root.iconphoto(True, icon_image)
 #designating how big the original window is
 root.geometry("500x500")
 
+def show():
+    mylab=Label(root,text=var.get()).pack()
 
+var=StringVar()
 
-var=IntVar()
-
-c=Checkbutton(root, text="Check Me!",variable=var)
+c=Checkbutton(root, text="Check Me!",variable=var,onvalue="ON",offvalue="OFF")
 c.pack()
 
-mylab=Label(root,text=var.get()).pack()
 
+mybut=Button(root,text="Show Checking",command=show).pack()
 
 
 
