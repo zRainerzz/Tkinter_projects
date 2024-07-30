@@ -31,7 +31,12 @@ conn=sqlite3.connect('address_book.db')
 c=conn.cursor()
 
 #Create table
-c.execute()
+c.execute("""CREATE TABLE adresses(
+          first_name text,
+          )
+
+
+""")
 
 #Commit changes
 conn.commit()
