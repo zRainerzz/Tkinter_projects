@@ -27,8 +27,13 @@ root.geometry("500x500")
 #Create a database or connect to one.
 conn=sqlite3.connect('address_book.db')
 
+#Create cursor
+c=conn.cursor()
 
+#Commit changes
+conn.commit()
 
+#Close connection
 
 
 root.mainloop()
