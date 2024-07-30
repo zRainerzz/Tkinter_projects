@@ -54,7 +54,17 @@ def submit():
     c=conn.cursor()
     #Clear The Text Boxes
     
-    
+
+    #Insert Into Table
+    c.execute("INSERT INTO adresses VALUES ()")
+
+
+    #Commit changes
+    conn.commit()
+
+    #Close connection
+    conn.close
+
     f_name.delete(0,END)
     l_name.delete(0,END)
     adress.delete(0,END)
