@@ -31,12 +31,15 @@ conn=sqlite3.connect('address_book.db')
 c=conn.cursor()
 
 #Create table
-c.execute("""CREATE TABLE adresses(
+c.execute("""CREATE TABLE adresses (
           first_name text,
-          )
-
-
-""")
+          last_name text,
+          adress text,
+          city text,
+          state text,
+          zipcode integer
+          
+)""")
 
 #Commit changes
 conn.commit()
