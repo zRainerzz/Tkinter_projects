@@ -44,6 +44,24 @@ c.execute("""CREATE TABLE adresses (
 )""")
 
 '''
+
+#Create Submit Function For Database
+def submit():
+    #Create a database or connect to one.
+    conn=sqlite3.connect('tkinter_17_GUI4DATABASE.db')
+
+    #Create cursor
+    c=conn.cursor()
+    #Clear The Text Boxes
+    
+    
+    f_name.delete(0,END)
+    l_name.delete(0,END)
+    adress.delete(0,END)
+    city.delete(0,END)
+    state.delete(0,END)
+    zipcode.delete(0,END)
+
 #Create Text Boxes
 
 f_name=Entry(root,width=30)
@@ -83,6 +101,13 @@ state_Label.grid(row=4,column=0)
 
 zipcode_Label=Label(root,text="Zipcode :")
 zipcode_Label.grid(row=5,column=0)
+
+#Create Submit Button
+
+submit_button=Button(root,text="Submit to the Database.",command=submit)
+submit_button.grid(row=6,column=0,columnspan=2,pady=10,padx=100)
+
+
 
 #Commit changes
 conn.commit()
