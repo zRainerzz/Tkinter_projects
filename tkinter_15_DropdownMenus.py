@@ -21,6 +21,11 @@ root.geometry("500x500")
 
 
 #Drop Down Boxes
+def show():
+    mylab=Label(root,text=clicked.get()).pack()
+
+
+
 #clicked need to be defined
 clicked=StringVar()
 clicked.set("Monday")
@@ -28,6 +33,8 @@ clicked.set("Monday")
 
 drop=OptionMenu(root, clicked,"Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday")
 drop.pack()
+
+but=Button(root,text="Show Selection",command=show).pack()
 
 
 
