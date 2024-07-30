@@ -56,7 +56,16 @@ def submit():
     
 
     #Insert Into Table
-    c.execute("INSERT INTO adresses VALUES ()")
+    c.execute("INSERT INTO adresses VALUES (:f_name, :l_name, :adress, :city, :state, :zipcode)",
+              
+              {
+                  'f_name':f_name.get(),
+                  'l_name':l_name.get(),
+                  'adress':adress.get(),
+                  'city':city.get(),
+                  'state':state.get(),
+                  'zipcode':zipcode.get()
+              })
 
 
     #Commit changes
