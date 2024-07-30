@@ -18,3 +18,17 @@ root.iconphoto(True, icon_image)
 
 #designating how big the original window is
 root.geometry("500x500")
+
+
+
+var=IntVar()
+
+c=Checkbutton(root, text="Check Me!",variable=var)
+c.pack()
+
+mylab=Label(root,text=var.get()).pack()
+
+
+
+
+root.mainloop()
