@@ -25,6 +25,13 @@ def show():
     mylab=Label(root,text=clicked.get()).pack()
 
 
+options=["Monday",
+         "Tuesday",
+         "Wednesday",
+         "Thursday",
+         "Friday",
+         "Saturday",
+         "Sunday"]
 
 #clicked need to be defined
 clicked=StringVar()
