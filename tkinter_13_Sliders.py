@@ -16,6 +16,8 @@ frame=LabelFrame(root,text="eyes on the button not me, stalker!",padx=50,pady=10
 icon_image = ImageTk.PhotoImage(Image.open("tkinter_icon.png"))
 root.iconphoto(True, icon_image)
 
+#designating how big the original window is
+root.geometry(500x500)
 
 
 vertical=Scale(root,from_=0,to=200)
