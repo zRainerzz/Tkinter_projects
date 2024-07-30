@@ -20,27 +20,27 @@ root.iconphoto(True, icon_image)
 root.geometry("500x500")
 
 
-def slide1():
-    mylab=Label(root,text=vertical.get()).pack()
-    root.geometry(str(vertical.get())+"x400")
-def slide2():
-    mylab2=Label(root,text=horizontal.get()).pack()
-    root.geometry(str(horizontal.get())+"x400")
-
-vertical=Scale(root,from_=0,to=800)
-horizontal=Scale(root,from_=0,to=800,orient=HORIZONTAL,command=slide2)
+vertical=Scale(root,from_=0,to=400)
 
 vertical.pack()
+
+
+
+
+
+
+def slide2():
+    mylab2=Label(root,text=horizontal.get()).pack()
+    root.geometry(str(horizontal.get())+"x"+str(vertical.get()))
+
+
+horizontal=Scale(root,from_=0,to=400,orient=HORIZONTAL)
 horizontal.pack()
 
-mylab=Label(root,text=vertical.get()).pack()
 mylab2=Label(root,text=horizontal.get()).pack()
 
 
-
-
-#btn1=Button(root,text="Slide vertically",command=slide1).pack()
-#btn2=Button(root,text="Slide horizentally",command=slide2).pack()
+btn2=Button(root,text="Slide From Here",command=slide2).pack()
 
 
 
