@@ -30,6 +30,9 @@ conn=sqlite3.connect('address_book.db')
 #Create cursor
 c=conn.cursor()
 
+#Create table
+
+
 #Commit changes
 conn.commit()
 
