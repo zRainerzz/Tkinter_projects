@@ -67,9 +67,7 @@ def submit():
                   'zipcode':zipcode.get()
               })
     
-    #Create a Query Button
-    query_button=Button(root,text="Show Records",command=querry)
-    query_button.grid(row=7,column=0,columnspan=2,pady=10,padx=10,ipadx=137)
+   
 
 
     #Commit changes
@@ -130,7 +128,9 @@ zipcode_Label.grid(row=5,column=0)
 submit_button=Button(root,text="Submit to the Database.",command=submit)
 submit_button.grid(row=6,column=0,columnspan=2,pady=10,padx=100)
 
-
+ #Create a Query Button
+query_button=Button(root,text="Show Records",command=querry)
+query_button.grid(row=7,column=0,columnspan=2,pady=10,padx=10,ipadx=137)
 
 #Commit changes
 conn.commit()
