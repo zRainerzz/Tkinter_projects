@@ -35,10 +35,10 @@ options=["Monday",
 
 #clicked need to be defined
 clicked=StringVar()
-clicked.set("Monday")
+clicked.set(options[0])
 
 
-drop=OptionMenu(root, clicked,"Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday")
+drop=OptionMenu(root, clicked,*options)
 drop.pack()
 
 but=Button(root,text="Show Selection",command=show).pack()
