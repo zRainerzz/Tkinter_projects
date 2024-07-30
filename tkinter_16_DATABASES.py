@@ -34,6 +34,7 @@ c=conn.cursor()
 conn.commit()
 
 #Close connection
+conn.close
 
 
 root.mainloop()
