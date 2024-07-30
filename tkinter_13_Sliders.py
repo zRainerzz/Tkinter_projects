@@ -26,8 +26,8 @@ horizontal=Scale(root,from_=0,to=200,orient=HORIZONTAL)
 vertical.pack()
 horizontal.pack()
 
-mylab=Label(root,text=vertical.get())
-mylab2=Label(root,text=horizontal.get())
+mylab=Label(root,text=vertical.get()).pack()
+mylab2=Label(root,text=horizontal.get()).pack()
 
 
 
