@@ -95,7 +95,10 @@ def updater():
 
     zipcode_Label=Label(editor,text="Zipcode :")
     zipcode_Label.grid(row=5,column=0)
-
+    
+    #Create a Save Button
+    update_button=Button(root,text="Save Records",command=updater)
+    update_button.grid(row=10,column=1,padx=10,pady=10)
 
 
 
@@ -243,6 +246,7 @@ delete_button.grid(row=10, column=0, pady=10,padx=10)
 #Create an Update Button
 update_button=Button(root,text="Update Records",command=updater)
 update_button.grid(row=10,column=1,padx=10,pady=10)
+
 #Commit changes
 conn.commit()
 
