@@ -98,11 +98,13 @@ def querry():
     records=c.fetchall()
     print(records)
 
+    #Loop through results
     print_records=''
     for record in records[0]:
         print_records += str(record) + "\n"
 
     querry_label=Label(root, text=print_records)
+    querry_label.grid(row=8,column=0,columnspan=2)
 
     #Commit changes
     conn.commit()
