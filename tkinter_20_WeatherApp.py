@@ -14,6 +14,7 @@ root.iconphoto(True, icon_image)
 #designating how big the original window is
 root.geometry("500x500")
 
-
+#Frame
+frame=LabelFrame(root,text="This is a Frame",padx=50,pady=100)#INTERNAL PADDING
 
 root.mainloop()
