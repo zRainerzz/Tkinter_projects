@@ -90,7 +90,7 @@ def updater():
 
 
     #designating how big the original window is
-    editor.geometry("400x400")
+    editor.geometry("500x500")
 
     #Create a database or connect to one.
     conn=sqlite3.connect('tkinter_17_GUI4DATABASE.db')
