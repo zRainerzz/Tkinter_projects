@@ -15,3 +15,7 @@ root.iconphoto(True, icon_image)
 
 #designating how big the original window is
 root.geometry("500x500")
+
+
+
+root.mainloop()
