@@ -30,17 +30,17 @@ try:
     category=api[0]["Category"]["Name"]
 
     if category=='Good':
-        weather_color=''
+        weather_color='#0C0'
     elif category=='Moderate':
-        weather_color=''
+        weather_color='#FFFF00'
     elif category=='Unhealthy for Sensitive Groups':
-        weather_color=''
+        weather_color='#ff9900'
     elif category=='Unhealthy':
-        weather_color=''
+        weather_color='#FF0000'
     elif category=='Very Unhealthy':
-        weather_color=''
+        weather_color='#990066'
     elif category=='Hazardous':
-        weather_color=''
+        weather_color='#600000'
 
 except Exception as e:
     api='ERROR...'
