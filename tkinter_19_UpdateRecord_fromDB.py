@@ -57,13 +57,7 @@ def edit():
 
     #Close connection
     conn.close
-    #Clear The Text Boxes
-    f_name.delete(0,END)
-    l_name.delete(0,END)
-    adress.delete(0,END)
-    city.delete(0,END)
-    state.delete(0,END)
-    zipcode.delete(0,END)
+
 
 
 #Create function to update records
