@@ -74,10 +74,11 @@ def edit():
             'zipcode':zipcode_editor.get(),
             'oid':record_id
             })
-
+    editor.destroy()
 
 #Create function to update records
 def updater():
+    global editor
     editor = Tk()
     editor.title("UPDATE A RECORD")
 
