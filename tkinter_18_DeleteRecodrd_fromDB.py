@@ -146,6 +146,9 @@ state.grid(row=4,column=1,padx=20)
 zipcode=Entry(root,width=30)
 zipcode.grid(row=5,column=1,padx=20)
 
+delete_box=Entry(root,width=30)
+delete_box.grid(row=9,column=1)
+
 #Create Text Box Labels
 
 f_name_Label=Label(root,text="First Name :")
@@ -166,6 +169,9 @@ state_Label.grid(row=4,column=0)
 zipcode_Label=Label(root,text="Zipcode :")
 zipcode_Label.grid(row=5,column=0)
 
+delete_box_label=Label(root,text="ID Number")
+delete_box_label.grid(row=9,column=0)
+
 #Create Submit Button
 
 submit_button=Button(root,text="Submit to the Database.",command=submit)
@@ -178,7 +184,7 @@ query_button.grid(row=7,column=0,columnspan=2,pady=10,padx=10,ipadx=132)
 
 # Create a Delete Button
 delete_button = Button(root, text="Delete Records", command=deleter)
-delete_button.grid(row=10, column=0, columnspan=2)
+delete_button.grid(row=10, column=0, columnspan=2,pady=10,padx=10,ipadx=128)
 
 #Commit changes
 conn.commit()
