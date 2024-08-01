@@ -117,7 +117,7 @@ def querry():
 #Create Text Boxes
 
 f_name=Entry(root,width=30)
-f_name.grid(row=0,column=1,padx=20)
+f_name.grid(row=0,column=1,padx=20,pady=(10,0))
 
 l_name=Entry(root,width=30)
 l_name.grid(row=1,column=1,padx=20)
