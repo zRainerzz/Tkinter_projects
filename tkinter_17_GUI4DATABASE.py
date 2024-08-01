@@ -92,9 +92,11 @@ def querry():
     c=conn.cursor()
 
     #Querry the Database
-    c.execute("SELECT *, iod FROM adresses")
     #primary key iod
-
+    #sqlite3 created and id for you (iod)
+    c.execute("SELECT *, iod FROM adresses")
+    records=c.fetchall()
+    print(records)
     #Commit changes
     conn.commit()
 
