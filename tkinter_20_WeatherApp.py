@@ -16,6 +16,8 @@ root.iconphoto(True, icon_image)
 #designating how big the original window is
 root.geometry("400x50")
 
+#Weather app, api from AirNow.gov
+
 #Frame
 frame=LabelFrame(root,text="This is a Frame",padx=5,pady=5)#INTERNAL PADDING
 
