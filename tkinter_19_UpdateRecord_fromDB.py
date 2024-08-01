@@ -59,28 +59,28 @@ def updater():
 
     #designating how big the original window is
     editor.geometry("500x500")
+    
     #Create Text Boxes
+    f_name_editor=Entry(root,width=30)
+    f_name_editor.grid(row=0,column=1,padx=20,pady=(10,0))
 
-    f_name=Entry(root,width=30)
-    f_name.grid(row=0,column=1,padx=20,pady=(10,0))
+    l_name_editor=Entry(root,width=30)
+    l_name_editor.grid(row=1,column=1,padx=20)
 
-    l_name=Entry(root,width=30)
-    l_name.grid(row=1,column=1,padx=20)
+    adress_editor=Entry(root,width=30)
+    adress_editor.grid(row=2,column=1,padx=20)
 
-    adress=Entry(root,width=30)
-    adress.grid(row=2,column=1,padx=20)
+    city_editor=Entry(root,width=30)
+    city_editor.grid(row=3,column=1,padx=20)
 
-    city=Entry(root,width=30)
-    city.grid(row=3,column=1,padx=20)
+    state_editor=Entry(root,width=30)
+    state_editor.grid(row=4,column=1,padx=20)
 
-    state=Entry(root,width=30)
-    state.grid(row=4,column=1,padx=20)
+    zipcode_editor=Entry(root,width=30)
+    zipcode_editor.grid(row=5,column=1,padx=20)
 
-    zipcode=Entry(root,width=30)
-    zipcode.grid(row=5,column=1,padx=20)
-
-    delete_box=Entry(root,width=30)
-    delete_box.grid(row=9,column=1,pady=5)
+    delete_box_editor=Entry(root,width=30)
+    delete_box_editor.grid(row=9,column=1,pady=5)
 
     #Create Text Box Labels
 
