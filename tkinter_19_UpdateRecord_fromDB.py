@@ -65,7 +65,7 @@ def updater():
 
     #Querry the Database
     record_id=delete_box.get()
-    c.execute("SELECT * FROM adresses")
+    c.execute("SELECT * FROM adresses WHERE oid = " + record_id)
     records=c.fetchall()
     #print(records)
 
