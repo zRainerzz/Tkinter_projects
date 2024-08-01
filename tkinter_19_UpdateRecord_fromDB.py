@@ -67,15 +67,7 @@ def updater():
     record_id=delete_box.get()
     c.execute("SELECT * FROM adresses WHERE oid = " + record_id)
     records=c.fetchall()
-    
-    #Loop Through results
-    for record in records:
-        f_name_editor.insert(0, record[0])
-        l_name_editor.insert(0, record[1])
-        adress_editor.insert(0, record[2])
-        city_editor.insert(0, record[3])
-        state_editor.insert(0, record[4])
-        zipcode_editor.insert(0, record[5])
+
 
     #Create Text Boxes
     f_name_editor=Entry(editor,width=30)
@@ -116,6 +108,15 @@ def updater():
     zipcode_Label=Label(editor,text="Zipcode :")
     zipcode_Label.grid(row=5,column=0)
     
+    #Loop Through results
+    for record in records:
+        f_name_editor.insert(0, record[0])
+        l_name_editor.insert(0, record[1])
+        adress_editor.insert(0, record[2])
+        city_editor.insert(0, record[3])
+        state_editor.insert(0, record[4])
+        zipcode_editor.insert(0, record[5])
+
     #Create a Save Button to save Edited records
     update_button=Button(editor,text="Save Records",command=)
     update_button.grid(row=6,column=0,padx=10,pady=10, ipadx=145,columnspan=2)
