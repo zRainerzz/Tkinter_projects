@@ -65,7 +65,6 @@ def edit():
               city =: city,
               state =: state,
               zipcode =: zipcode
-
               WHERE oid =: oid""",
             {
             'first':f_name_editor.get(),
