@@ -52,7 +52,7 @@ def submit():
 
     #Create cursor
     c=conn.cursor()
-    #Clear The Text Boxes
+    
     
 
     #Insert Into Table
@@ -75,13 +75,33 @@ def submit():
 
     #Close connection
     conn.close
-
+    #Clear The Text Boxes
     f_name.delete(0,END)
     l_name.delete(0,END)
     adress.delete(0,END)
     city.delete(0,END)
     state.delete(0,END)
     zipcode.delete(0,END)
+
+#Create Querry func
+def querry():
+    #Create a database or connect to one.
+    conn=sqlite3.connect('tkinter_17_GUI4DATABASE.db')
+
+    #Create cursor
+    c=conn.cursor()
+
+    #Querry the Database
+    c.execute("SELECT *, iod FROM adresses")
+    #primary key iod
+
+    #Commit changes
+    conn.commit()
+
+    #Close connection
+    conn.close
+
+
 
 #Create Text Boxes
 
@@ -126,11 +146,11 @@ zipcode_Label.grid(row=5,column=0)
 #Create Submit Button
 
 submit_button=Button(root,text="Submit to the Database.",command=submit)
-submit_button.grid(row=6,column=0,columnspan=2,pady=10,padx=100)
+submit_button.grid(row=6,column=0,columnspan=2,pady=10,padx=10,ipadx=100)
 
  #Create a Query Button
 query_button=Button(root,text="Show Records",command=querry)
-query_button.grid(row=7,column=0,columnspan=2,pady=10,padx=10,ipadx=137)
+query_button.grid(row=7,column=0,columnspan=2,pady=10,padx=10,ipadx=132)
 
 #Commit changes
 conn.commit()
