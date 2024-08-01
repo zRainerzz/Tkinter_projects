@@ -169,7 +169,7 @@ state_Label.grid(row=4,column=0)
 zipcode_Label=Label(root,text="Zipcode :")
 zipcode_Label.grid(row=5,column=0)
 
-delete_box_label=Label(root,text="ID Number")
+delete_box_label=Label(root,text="Delete ID")
 delete_box_label.grid(row=9,column=0)
 
 #Create Submit Button
