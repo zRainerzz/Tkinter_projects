@@ -51,22 +51,32 @@ def edit():
     #Create cursor
     c=conn.cursor()
     
+    record_id=delete_box.get()
+    c.execute("""UPDATE adresses SET
+              first_name = :first,
+              last_name = :last,
+              adress = :adress,
+              city = :city,
+              state = :state,
+              zipcode = :zipcode
+              WHERE oid = :oid""",
+            {
+            'first':f_name_editor.get(),
+            'last':l_name_editor.get(),
+            'adress':adress_editor.get(),  
+
+            'city':city_editor.get(),
+            'state':state_editor.get(),
+            'zipcode':zipcode_editor.get(),
+            'oid':record_id  
+
+            })
     #Commit changes
     conn.commit()
 
-    #Close connection
-    conn.close
-    record_id=delete_box.get()
-    update_query = f"""UPDATE adresses SET 
-              first_name = '{f_name_editor.get()}',
-              last_name = '{l_name_editor.get()}',
-              adress = '{adress_editor.get()}',
-              city = '{city_editor.get()}',
-              state = '{state_editor.get()}',
-              zipcode = '{zipcode_editor.get()}'
-              WHERE oid = {record_id}"""
+    #Close Connection
+    conn.close()
 
-    c.execute(update_query)
     editor.destroy()
 
 #Create function to update records
