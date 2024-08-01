@@ -26,7 +26,7 @@ try:
 except Exception as e:
     api='ERROR...'
 
-mylab=Label(frame,text=api)
+mylab=Label(frame,text=api[0])
 
 
 mylab.pack()
