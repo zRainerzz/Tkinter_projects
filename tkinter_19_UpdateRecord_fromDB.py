@@ -66,7 +66,8 @@ def edit():
               zipcode =: zipcode
 
               WHERE oid =: oid""",
-              )
+            {'first':f_name_editor.get()
+            })
 
 
 #Create function to update records
@@ -92,6 +93,14 @@ def updater():
     c.execute("SELECT * FROM adresses WHERE oid = " + record_id)
     records=c.fetchall()
 
+
+    #Create Global Variables for Text Box names
+    global f_name_editor
+    global l_name_editor
+    global adress_editor
+    global city_editor
+    global state_editor
+    global zipcode_editor
 
     #Create Text Boxes
     f_name_editor=Entry(editor,width=30)
