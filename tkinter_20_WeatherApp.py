@@ -25,10 +25,13 @@ frame=LabelFrame(root,text="This is a Frame",padx=5,pady=5)#INTERNAL PADDING
 try:
     api_req=requests.get("https://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode=89129&distance=5&API_KEY=9BE25E99-5FC4-4F57-B4AD-72DC0518FE67")
     api=json.loads(api_req.content)
+    city=api[0]["ReportinArea"]
+    quality=api[0]['AQI']
+    category=api[0]["Category"]["Name"]
 except Exception as e:
     api='ERROR...'
 
-mylab=Label(frame,text=api[0]["ReportingArea"])
+mylab=Label(frame,text=city + "Air Quality: "+ str(quality)+ " "+ category)
 
 
 mylab.pack()
