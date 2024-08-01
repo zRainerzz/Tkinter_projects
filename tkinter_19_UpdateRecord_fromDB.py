@@ -66,7 +66,13 @@ def edit():
               zipcode =: zipcode
 
               WHERE oid =: oid""",
-            {'first':f_name_editor.get()
+            {
+                'first':f_name_editor.get(),
+                'last':l_name_editor.get(),
+                'adress':adress_editor.get(),
+                'city':city_editor.get(),
+                'state':state_editor.get(),
+                'zipcode':zipcode_editor.get()
             })
 
 
