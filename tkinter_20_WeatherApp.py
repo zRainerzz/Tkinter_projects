@@ -14,7 +14,7 @@ icon_image = ImageTk.PhotoImage(Image.open("tkinter_icon.png"))
 root.iconphoto(True, icon_image)
 
 #designating how big the original window is
-root.geometry("400x400")
+root.geometry("500x400")
 
 #Weather app, api from AirNow.gov
 
@@ -23,15 +23,15 @@ frame=LabelFrame(root,text="This is a Frame",padx=5,pady=5)#INTERNAL PADDING
 
 #Creating a request, it has my API Key , i'll delete it once i finish recording, go to airnowapi and make your own account.
 try:
-    api_req=requests.get("https://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode=89129&distance=5&API_KEY=7")
+    api_req=requests.get("https://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode=89129&distance=5&API_KEY=9BE25E99-5FC4-4F57-B4AD-72DC0518FE67")
     api=json.loads(api_req.content)
-    city=api[0]["ReportinArea"]
+    city= api[0]["ReportingArea"]
     quality=api[0]['AQI']
     category=api[0]["Category"]["Name"]
 except Exception as e:
     api='ERROR...'
 
-mylab=Label(frame,text=city + "Air Quality: "+ str(quality)+ " "+ category)
+mylab=Label(frame,text=city + "Air Quality: "+ str(quality)+ " "+ category,font=("Helvetica",18))
 
 
 mylab.pack()
