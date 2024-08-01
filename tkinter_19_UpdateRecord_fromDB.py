@@ -45,6 +45,70 @@ c.execute("""CREATE TABLE adresses (
 
 '''
 
+#Create function to update records
+def updater():
+    editor = Tk()
+    editor.title("UPDATE A RECORD")
+
+    """ Windows icon (replace with your .ico file) """
+    # root.iconbitmap("tkinter_icon.ico")  # Uncomment for Windows
+    
+    """ Linux icon (replace with your .png file) """
+    icon_image = ImageTk.PhotoImage(Image.open("tkinter_icon.png"))
+    editor.iconphoto(True, icon_image)
+
+    #designating how big the original window is
+    editor.geometry("500x500")
+    #Create Text Boxes
+
+    f_name=Entry(root,width=30)
+    f_name.grid(row=0,column=1,padx=20,pady=(10,0))
+
+    l_name=Entry(root,width=30)
+    l_name.grid(row=1,column=1,padx=20)
+
+    adress=Entry(root,width=30)
+    adress.grid(row=2,column=1,padx=20)
+
+    city=Entry(root,width=30)
+    city.grid(row=3,column=1,padx=20)
+
+    state=Entry(root,width=30)
+    state.grid(row=4,column=1,padx=20)
+
+    zipcode=Entry(root,width=30)
+    zipcode.grid(row=5,column=1,padx=20)
+
+    delete_box=Entry(root,width=30)
+    delete_box.grid(row=9,column=1,pady=5)
+
+    #Create Text Box Labels
+
+    f_name_Label=Label(root,text="First Name :")
+    f_name_Label.grid(row=0,column=0,pady=(10,0))
+
+    l_name_Label=Label(root,text="Last Name :")
+    l_name_Label.grid(row=1,column=0)
+
+    adress_Label=Label(root,text="Adress :")
+    adress_Label.grid(row=2,column=0)
+
+    city_Label=Label(root,text="City :")
+    city_Label.grid(row=3,column=0)
+
+    state_Label=Label(root,text="State :")
+    state_Label.grid(row=4,column=0)
+
+    zipcode_Label=Label(root,text="Zipcode :")
+    zipcode_Label.grid(row=5,column=0)
+
+    select_box_label=Label(root,text="SELECTED ID")
+    select_box_label.grid(row=9,column=0,pady=5)
+
+
+
+
+
 #Create function to delete record.
 def deleter():
     #Create a database or connect to one.
@@ -184,8 +248,11 @@ query_button.grid(row=7,column=0,columnspan=2,pady=10,padx=10,ipadx=132)
 
 # Create a Delete Button
 delete_button = Button(root, text="Delete Records", command=deleter)
-delete_button.grid(row=10, column=0, columnspan=2,pady=10,padx=10,ipadx=128)
+delete_button.grid(row=10, column=0, pady=10,padx=10)
 
+#Create an Update Button
+update_button=Button(root,text="Update Records",command=updater)
+update_button.grid(row=10,column=1,padx=10,pady=10)
 #Commit changes
 conn.commit()
 
