@@ -25,7 +25,7 @@ root.geometry("500x500")
 
 
 #Create a database or connect to one.
-conn=sqlite3.connect('tkinter_17_GUI4DATABASE.db')
+conn=sqlite3.connect('tkinter_19_GUI4DATABASE.db')
 
 #Create cursor
 c=conn.cursor()
@@ -42,7 +42,6 @@ c.execute("""CREATE TABLE adresses (
           zipcode integer
           
 )""")
-
 
 
 def edit():
