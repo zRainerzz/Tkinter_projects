@@ -45,6 +45,15 @@ c.execute("""CREATE TABLE adresses (
 
 '''
 
+#Create function to delete record.
+def deleter():
+        #Create a database or connect to one.
+    conn=sqlite3.connect('tkinter_17_GUI4DATABASE.db')
+
+    #Create cursor
+    c=conn.cursor()
+    
+
 #Create Submit Function For Database
 def submit():
     #Create a database or connect to one.
@@ -137,7 +146,7 @@ zipcode.grid(row=5,column=1,padx=20)
 #Create Text Box Labels
 
 f_name_Label=Label(root,text="First Name :")
-f_name_Label.grid(row=0,column=0)
+f_name_Label.grid(row=0,column=0,pady=(10,0))
 
 l_name_Label=Label(root,text="Last Name :")
 l_name_Label.grid(row=1,column=0)
