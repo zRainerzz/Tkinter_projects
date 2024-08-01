@@ -79,9 +79,6 @@ def updater():
     zipcode_editor=Entry(root,width=30)
     zipcode_editor.grid(row=5,column=1,padx=20)
 
-    delete_box_editor=Entry(root,width=30)
-    delete_box_editor.grid(row=9,column=1,pady=5)
-
     #Create Text Box Labels
 
     f_name_Label=Label(root,text="First Name :")
@@ -101,10 +98,6 @@ def updater():
 
     zipcode_Label=Label(root,text="Zipcode :")
     zipcode_Label.grid(row=5,column=0)
-
-    select_box_label=Label(root,text="SELECTED ID")
-    select_box_label.grid(row=9,column=0,pady=5)
-
 
 
 
