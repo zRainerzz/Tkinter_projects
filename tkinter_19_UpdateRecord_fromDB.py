@@ -51,6 +51,13 @@ def edit():
 
     #Create cursor
     c=conn.cursor()
+    
+    #Commit changes
+    conn.commit()
+
+    #Close connection
+    conn.close
+
 
 #Create function to update records
 def updater():
