@@ -68,6 +68,10 @@ def updater():
     c.execute("SELECT * FROM adresses WHERE oid = " + record_id)
     records=c.fetchall()
     
+    #Loop Through results
+    for record in records:
+        f_name_editor.insert(0, record[6])
+
     #Loop through results
     print_records=''
     for record in records:
