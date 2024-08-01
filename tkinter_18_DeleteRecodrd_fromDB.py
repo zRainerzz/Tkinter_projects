@@ -116,7 +116,7 @@ def querry():
         print_records += str(record[6]) +"  -"+ str(record[0])+" " +str(record[1]) +" "+str(record[2]) +" "+str(record[3]) +" "+str(record[4]) +" "+str(record[5]) + "\t"+"\n"
 
     querry_label=Label(root, text=print_records)
-    querry_label.grid(row=8,column=0,columnspan=2)
+    querry_label.grid(row=11,column=0,columnspan=2)
 
     #Commit changes
     conn.commit()
@@ -147,7 +147,7 @@ zipcode=Entry(root,width=30)
 zipcode.grid(row=5,column=1,padx=20)
 
 delete_box=Entry(root,width=30)
-delete_box.grid(row=9,column=1)
+delete_box.grid(row=9,column=1,pady=5)
 
 #Create Text Box Labels
 
@@ -170,7 +170,7 @@ zipcode_Label=Label(root,text="Zipcode :")
 zipcode_Label.grid(row=5,column=0)
 
 delete_box_label=Label(root,text="Delete ID")
-delete_box_label.grid(row=9,column=0)
+delete_box_label.grid(row=9,column=0,pady=5)
 
 #Create Submit Button
 
