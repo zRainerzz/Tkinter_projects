@@ -31,7 +31,7 @@ conn=sqlite3.connect('tkinter_19_GUI4DATABASE.db')
 c=conn.cursor()
 
 #since we have the data base we don't want to run it again. we did a .db already
-
+'''
 #Create table
 c.execute("""CREATE TABLE adresses (
           first_name text,
@@ -42,7 +42,7 @@ c.execute("""CREATE TABLE adresses (
           zipcode integer
           
 )""")
-
+'''
 
 def edit():
     #Create a database or connect to one.
@@ -58,13 +58,13 @@ def edit():
     conn.close
     record_id=delete_box.get()
     c.execute("""UPDATE adresses SET
-              first_name =: first,
-              last_name =: last,
-              adress =: adress
-              city =: city,
-              state =: state,
-              zipcode =: zipcode
-              WHERE oid =: oid""",
+              first_name = :first,
+              last_name = :last,
+              adress = :adress
+              city = :city,
+              state = :state,
+              zipcode = :zipcode
+              WHERE oid = :oid""",
             {
             'first':f_name_editor.get(),
             'last':l_name_editor.get(),
@@ -72,7 +72,6 @@ def edit():
             'city':city_editor.get(),
             'state':state_editor.get(),
             'zipcode':zipcode_editor.get(),
-
             'oid':record_id
             })
 
