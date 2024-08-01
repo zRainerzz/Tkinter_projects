@@ -1,7 +1,5 @@
 from tkinter import *
 from PIL import Image, ImageTk
-import sqlite3
-
 
 root = Tk()
 root.title("github.com/zRainerzz")
