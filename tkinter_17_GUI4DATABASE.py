@@ -94,9 +94,16 @@ def querry():
     #Querry the Database
     #primary key iod
     #sqlite3 created and id for you (iod)
-    c.execute("SELECT * FROM adresses")
+    c.execute("SELECT *, oid FROM adresses")
     records=c.fetchall()
     print(records)
+
+    print_records=''
+    for record in records[0]:
+        print_records += str(record) + "\n"
+
+    querry_label=Label(root, text=print_records)
+
     #Commit changes
     conn.commit()
 
