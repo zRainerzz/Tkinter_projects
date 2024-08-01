@@ -70,18 +70,12 @@ def updater():
     
     #Loop Through results
     for record in records:
-        f_name_editor.insert(0, record[6])
-        l_name_editor.insert(0, record[6])
-        adress_editor.insert(0, record[6])
-        city_editor.insert(0, record[6])
-        state_editor.insert(0, record[6])
-        zipcode_editor.insert(0, record[6])
-
-    #Loop through results
-    print_records=''
-    for record in records:
-        print_records += str(record[6]) +"  -"+ str(record[0])+" " +str(record[1]) +" "+str(record[2]) +" "+str(record[3]) +" "+str(record[4]) +" "+str(record[5]) + "\t"+"\n"
-
+        f_name_editor.insert(0, record[0])
+        l_name_editor.insert(0, record[1])
+        adress_editor.insert(0, record[2])
+        city_editor.insert(0, record[3])
+        state_editor.insert(0, record[4])
+        zipcode_editor.insert(0, record[5])
 
     #Create Text Boxes
     f_name_editor=Entry(editor,width=30)
