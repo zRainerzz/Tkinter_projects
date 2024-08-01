@@ -14,12 +14,12 @@ icon_image = ImageTk.PhotoImage(Image.open("tkinter_icon.png"))
 root.iconphoto(True, icon_image)
 
 #designating how big the original window is
-root.geometry("500x400")
+root.geometry("600x40")
+root.configure(background="green")
 
 #Weather app, api from AirNow.gov
 
-#Frame
-frame=LabelFrame(root,text="API FROM AirNow.gov",padx=5,pady=5)#INTERNAL PADDING
+
 
 #Creating a request, it has my API Key , i'll delete it once i finish recording, go to airnowapi and make your own account.
 try:
@@ -31,10 +31,9 @@ try:
 except Exception as e:
     api='ERROR...'
 
-mylab=Label(frame,text=city + "Air Quality: "+ str(quality)+ " "+ category,font=("Helvetica",18))
+mylab=Label(root,pady=5,text=city + "Air Quality: "+ str(quality)+ " "+ category,font=("Helvetica",20),background='green')
 
 
 mylab.pack()
-frame.pack(padx=20,pady=20)#EXTERNAL PADDING
 
 root.mainloop()
