@@ -56,7 +56,26 @@ def updater():
 
     #designating how big the original window is
     editor.geometry("500x500")
-    
+
+    #Create a database or connect to one.
+    conn=sqlite3.connect('tkinter_17_GUI4DATABASE.db')
+
+    #Create cursor
+    c=conn.cursor()
+
+    #Querry the Database
+    #primary key iod
+    #sqlite3 created and id for you (iod)
+    c.execute("SELECT *, oid FROM adresses")
+    records=c.fetchall()
+    #print(records)
+
+    #Loop through results
+    print_records=''
+    for record in records:
+        print_records += str(record[6]) +"  -"+ str(record[0])+" " +str(record[1]) +" "+str(record[2]) +" "+str(record[3]) +" "+str(record[4]) +" "+str(record[5]) + "\t"+"\n"
+
+
     #Create Text Boxes
     f_name_editor=Entry(editor,width=30)
     f_name_editor.grid(row=0,column=1,padx=20,pady=(10,0))
@@ -99,24 +118,6 @@ def updater():
     #Create a Save Button to save Edited records
     update_button=Button(editor,text="Save Records",command=)
     update_button.grid(row=6,column=0,padx=10,pady=10, ipadx=145,columnspan=2)
-    
-    #Create a database or connect to one.
-    conn=sqlite3.connect('tkinter_17_GUI4DATABASE.db')
-
-    #Create cursor
-    c=conn.cursor()
-
-    #Querry the Database
-    #primary key iod
-    #sqlite3 created and id for you (iod)
-    c.execute("SELECT *, oid FROM adresses")
-    records=c.fetchall()
-    #print(records)
-
-    #Loop through results
-    print_records=''
-    for record in records:
-        print_records += str(record[6]) +"  -"+ str(record[0])+" " +str(record[1]) +" "+str(record[2]) +" "+str(record[3]) +" "+str(record[4]) +" "+str(record[5]) + "\t"+"\n"
 
 
 
