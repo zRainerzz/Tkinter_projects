@@ -57,6 +57,7 @@ def edit():
 
     #Close connection
     conn.close
+    record_id=delete_box.get()
     c.execute(""" UPDATE adresses SET
               first_name =: first,
               last_name =: last,
@@ -67,12 +68,14 @@ def edit():
 
               WHERE oid =: oid""",
             {
-                'first':f_name_editor.get(),
-                'last':l_name_editor.get(),
-                'adress':adress_editor.get(),
-                'city':city_editor.get(),
-                'state':state_editor.get(),
-                'zipcode':zipcode_editor.get()
+            'first':f_name_editor.get(),
+            'last':l_name_editor.get(),
+            'adress':adress_editor.get(),
+            'city':city_editor.get(),
+            'state':state_editor.get(),
+            'zipcode':zipcode_editor.get(),
+
+            'oid':record_id
             })
 
 
