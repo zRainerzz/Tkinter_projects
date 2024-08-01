@@ -118,7 +118,7 @@ def updater():
         zipcode_editor.insert(0, record[5])
 
     #Create a Save Button to save Edited records
-    update_button=Button(editor,text="Save Records",command=)
+    update_button=Button(editor,text="Save Records",command=updater)
     update_button.grid(row=6,column=0,padx=10,pady=10, ipadx=145,columnspan=2)
 
 
