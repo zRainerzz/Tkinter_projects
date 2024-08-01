@@ -52,10 +52,7 @@ def updater():
 
     """ Windows icon (replace with your .ico file) """
     # root.iconbitmap("tkinter_icon.ico")  # Uncomment for Windows
-    
-    """ Linux icon (replace with your .png file) """
-    icon_image = ImageTk.PhotoImage(Image.open("tkinter_icon.png"))
-    editor.iconphoto(True, icon_image)
+
 
     #designating how big the original window is
     editor.geometry("500x500")
