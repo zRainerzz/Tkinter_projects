@@ -101,7 +101,7 @@ def querry():
     #Loop through results
     print_records=''
     for record in records:
-        print_records += str(record) + "\n"
+        print_records += str(record[0])+" " +str(record[1]) +" "+str(record[2]) +" "+str(record[3]) +" "+str(record[4]) +" "+str(record[5]) + "\t"+str(record[6]) + "\n"
 
     querry_label=Label(root, text=print_records)
     querry_label.grid(row=8,column=0,columnspan=2)
