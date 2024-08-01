@@ -64,9 +64,8 @@ def updater():
     c=conn.cursor()
 
     #Querry the Database
-    #primary key iod
-    #sqlite3 created and id for you (iod)
-    c.execute("SELECT *, oid FROM adresses")
+    record_id=delete_box.get()
+    c.execute("SELECT * FROM adresses")
     records=c.fetchall()
     #print(records)
 
