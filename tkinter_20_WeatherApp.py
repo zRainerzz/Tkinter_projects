@@ -14,7 +14,7 @@ icon_image = ImageTk.PhotoImage(Image.open("tkinter_icon.png"))
 root.iconphoto(True, icon_image)
 
 #designating how big the original window is
-root.geometry("400x50")
+root.geometry("400x400")
 
 #Weather app, api from AirNow.gov
 
@@ -28,7 +28,7 @@ try:
 except Exception as e:
     api='ERROR...'
 
-mylab=Label(frame,text=api[0])
+mylab=Label(frame,text=api[0]["ReportingArea"])
 
 
 mylab.pack()
