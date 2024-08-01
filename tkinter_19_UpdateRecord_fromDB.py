@@ -71,6 +71,11 @@ def updater():
     #Loop Through results
     for record in records:
         f_name_editor.insert(0, record[6])
+        l_name_editor.insert(0, record[6])
+        adress_editor.insert(0, record[6])
+        city_editor.insert(0, record[6])
+        state_editor.insert(0, record[6])
+        zipcode_editor.insert(0, record[6])
 
     #Loop through results
     print_records=''
