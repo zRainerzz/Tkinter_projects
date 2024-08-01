@@ -21,7 +21,7 @@ root.configure(background="green")
 
 
 
-#Creating a request, it has my API Key , i'll delete it once i finish recording, go to airnowapi and make your own account.
+#Creating a request, it has my API Key , you can create a new account or just use my account, since AirNow.gov works only in USA i don't need that api.
 try:
     api_req=requests.get("https://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode=89129&distance=5&API_KEY=9BE25E99-5FC4-4F57-B4AD-72DC0518FE67")
     api=json.loads(api_req.content)
