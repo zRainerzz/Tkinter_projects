@@ -57,7 +57,16 @@ def edit():
 
     #Close connection
     conn.close
+    c.execute(""" UPDATE adresses SET
+              first_name =: first,
+              last_name =: last,
+              adress =: adress
+              city =: city,
+              state =: state,
+              zipcode =: zipcode
 
+              WHERE oid =: oid""",
+              )
 
 
 #Create function to update records
