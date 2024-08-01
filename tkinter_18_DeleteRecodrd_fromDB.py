@@ -47,12 +47,15 @@ c.execute("""CREATE TABLE adresses (
 
 #Create function to delete record.
 def deleter():
-        #Create a database or connect to one.
+    #Create a database or connect to one.
     conn=sqlite3.connect('tkinter_17_GUI4DATABASE.db')
 
     #Create cursor
     c=conn.cursor()
     
+    #Delete record
+    c.execute('DELETE from adresses WHERE oid=PLACEHOLDER')
+
 
 #Create Submit Function For Database
 def submit():
@@ -171,6 +174,10 @@ submit_button.grid(row=6,column=0,columnspan=2,pady=10,padx=10,ipadx=100)
  #Create a Query Button
 query_button=Button(root,text="Show Records",command=querry)
 query_button.grid(row=7,column=0,columnspan=2,pady=10,padx=10,ipadx=132)
+
+#Create a Delete Button
+delete_button=Button(root,text="Delete Records",command=deleter)
+delete_button.grid(row=9,column=0,columnspan=2,pady=10,padx=10,ipadx=132)
 
 #Commit changes
 conn.commit()
