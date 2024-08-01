@@ -23,7 +23,7 @@ frame=LabelFrame(root,text="This is a Frame",padx=5,pady=5)#INTERNAL PADDING
 
 #Creating a request, it has my API Key , i'll delete it once i finish recording, go to airnowapi and make your own account.
 try:
-    api_req=requests.get("https://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode=89129&distance=5&API_KEY=9BE25E99-5FC4-4F57-B4AD-72DC0518FE67")
+    api_req=requests.get("https://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode=89129&distance=5&API_KEY=7")
     api=json.loads(api_req.content)
     city=api[0]["ReportinArea"]
     quality=api[0]['AQI']
