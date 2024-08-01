@@ -94,7 +94,7 @@ def querry():
     #Querry the Database
     #primary key iod
     #sqlite3 created and id for you (iod)
-    c.execute("SELECT *, iod FROM adresses")
+    c.execute("SELECT * FROM adresses")
     records=c.fetchall()
     print(records)
     #Commit changes
