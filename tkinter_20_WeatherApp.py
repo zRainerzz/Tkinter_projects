@@ -26,6 +26,10 @@ try:
 except Exception as e:
     api='ERROR...'
 
+mylab=Label(frame,text=api)
+
+
+mylab.pack()
 frame.pack(padx=20,pady=20)#EXTERNAL PADDING
 
 root.mainloop()
