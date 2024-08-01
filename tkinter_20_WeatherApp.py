@@ -19,7 +19,7 @@ root.geometry("500x400")
 #Weather app, api from AirNow.gov
 
 #Frame
-frame=LabelFrame(root,text="This is a Frame",padx=5,pady=5)#INTERNAL PADDING
+frame=LabelFrame(root,text="API FROM AirNow.gov",padx=5,pady=5)#INTERNAL PADDING
 
 #Creating a request, it has my API Key , i'll delete it once i finish recording, go to airnowapi and make your own account.
 try:
