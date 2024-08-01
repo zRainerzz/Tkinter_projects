@@ -54,7 +54,7 @@ def deleter():
     c=conn.cursor()
     
     #Delete record
-    c.execute('DELETE from adresses WHERE oid=PLACEHOLDER')
+    c.execute('DELETE from adresses WHERE oid= '+delete_box.get())
 
 
 #Create Submit Function For Database
