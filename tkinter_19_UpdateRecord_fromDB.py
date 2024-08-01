@@ -67,8 +67,7 @@ def updater():
     record_id=delete_box.get()
     c.execute("SELECT * FROM adresses WHERE oid = " + record_id)
     records=c.fetchall()
-    #print(records)
-
+    
     #Loop through results
     print_records=''
     for record in records:
