@@ -14,7 +14,7 @@ icon_image = ImageTk.PhotoImage(Image.open("tkinter_icon.png"))
 root.iconphoto(True, icon_image)
 
 #designating how big the original window is
-root.geometry("600x100")
+root.geometry("400x200")
 #Weather app, api from AirNow.gov
 
 
