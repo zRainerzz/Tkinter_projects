@@ -18,13 +18,13 @@ root.geometry("600x100")
 #Weather app, api from AirNow.gov
 
 def zipLookup():
-    zpi.get()
-    zipLabel=Label(root,text=zpi.get())
-    zipLabel.grip(row=1,column=0,columnspan=2)
+    #zpi.get()
+    #zipLabel=Label(root,text=zpi.get())
+    #zipLabel.grip(row=1,column=0,columnspan=2)
 
 #Creating a request, it has my API Key , you can create a new account or just use my account, since AirNow.gov works only in USA i don't need that api.
     try:
-        api_req=requests.get("https://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode=89129&distance=5&API_KEY=9BE25E99-5FC4-4F57-B4AD-72DC0518FE67")
+        api_req=requests.get("https://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode=" + zpi.get() + "&distance=5&API_KEY=9BE25E99-5FC4-4F57-B4AD-72DC0518FE67")
         api=json.loads(api_req.content)
         city= api[0]["ReportingArea"]
         quality=api[0]['AQI']
