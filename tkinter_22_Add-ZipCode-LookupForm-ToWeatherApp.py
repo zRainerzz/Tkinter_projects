@@ -58,7 +58,7 @@ zpi=Entry(root)
 zipButton=Button(root,text='Lookup Zipcode',command=zipLookup)
 
 
-zipButton.grid(row=0,column=1)
-zpi.grid(row=0,column=0)
+zipButton.grid(row=0,column=1,sticky=W+E+N+S)
+zpi.grid(row=0,column=0,sticky=W+E+N+S)
 
 root.mainloop()
