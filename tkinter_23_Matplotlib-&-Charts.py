@@ -26,10 +26,19 @@ def graph2():
     plt.pie(house_prices1)
     plt.show()
 
+def graph3():
+    house_prices1=np.random.normal(200000,25000,5000)
+    plt.polar(house_prices1)
+    plt.show()
+
 my_but=Button(root,text='Graphic',command=graph1)
-my_but2=Button(root,text='PIE GRAPHIC',command=graph2)
+my_but2=Button(root,text='PIE Chart GRAPHIC',command=graph2)
+my_but3=Button(root,text='Polar GRAPHIC',command=graph3)
 
 my_but.pack()
 my_but2.pack()
+my_but3.pack()
+
+#Googling matplotlibs and seeing the types and graphics that someone can do might be very helpful.
 
 root.mainloop()
