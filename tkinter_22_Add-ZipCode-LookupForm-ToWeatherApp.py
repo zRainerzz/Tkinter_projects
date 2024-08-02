@@ -45,13 +45,14 @@ def zipLookup():
 
         #Changing color of bg
         root.configure(background=weather_color)
-        
+
+        mylab=Label(root,pady=5,text=city + "Air Quality: "+ str(quality)+ " "+ category,font=("Helvetica",20),background=weather_color)
+        mylab.grid(row=1,column=0,columnspan=2)        
 
     except Exception as e:
         api='ERROR...'
 
-    mylab=Label(root,pady=5,text=city + "Air Quality: "+ str(quality)+ " "+ category,font=("Helvetica",20),background=weather_color)
-    mylab.pack()
+
 
 zpi=Entry(root)
 zipButton=Button(root,text='Lookup Zipcode',command=zipLookup)
