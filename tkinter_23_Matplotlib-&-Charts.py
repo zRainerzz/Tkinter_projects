@@ -15,7 +15,7 @@ root.iconphoto(True, icon_image)
 
 #designating how big the original window is
 root.geometry("400x200")
-#Weather app, api from AirNow.gov
+
 
 
 root.mainloop()
