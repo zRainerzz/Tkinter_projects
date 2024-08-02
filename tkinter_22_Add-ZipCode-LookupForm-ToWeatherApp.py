@@ -50,12 +50,13 @@ def zipLookup():
     except Exception as e:
         api='ERROR...'
 
-mylab=Label(root,pady=5,text=city + "Air Quality: "+ str(quality)+ " "+ category,font=("Helvetica",20),background=weather_color)
+    mylab=Label(root,pady=5,text=city + "Air Quality: "+ str(quality)+ " "+ category,font=("Helvetica",20),background=weather_color)
+    mylab.pack()
 
 zpi=Entry(root)
 zipButton=Button(root,text='Lookup Zipcode',command=zipLookup)
 
-mylab.pack()
+
 zipButton.grid(row=0,column=1)
 zpi.grid(row=0,column=0)
 
