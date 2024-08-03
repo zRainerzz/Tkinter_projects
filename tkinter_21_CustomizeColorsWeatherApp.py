@@ -47,7 +47,7 @@ try:
 except Exception as e:
     api='ERROR...'
 
-mylab=Label(root,pady=5,text=city + "Air Quality: "+ str(quality)+ " "+ category,font=("Helvetica",20),background=weather_color)
+mylab=Label(root,pady=5,text=city + ", Air Quality: "+ str(quality)+ " "+ category,font=("Helvetica",20),background=weather_color)
 
 
 mylab.pack()
