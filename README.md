@@ -3,4 +3,4 @@ A tkinter course (python's most popular GUI module), i'm working on a repository
 this repository aims the beginners and i'm sure that after i finish working on it, you guys will be grateful. i'll make sure that nobody give a negative remark about it once finished. Thanks in advance.
 
 
-a big thanks to the opportunity that John Elder gave us, thanks to codemy.com as a whole for enlighting me with course.
+a big thanks to the opportunity that John Elder gave us, thanks to codemy.com as a whole for enlighting me and made me capable of doing such projects.
